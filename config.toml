@@ -1,0 +1,22 @@
+theme = "tokyonight_storm"
+
+[editor]
+bufferline = "always"
+text-width = 120
+idle-timeout = 200
+completion-trigger-len = 1
+color-modes = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding"]
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
