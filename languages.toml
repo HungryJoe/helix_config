@@ -6,3 +6,15 @@ language-servers = ["pyright"]
 command = "pyright-langserver"
 args = ["--stdio"] 
 config = {python = {analysis = {autoSearchPaths = true,diagnosticMode = "workspace",useLibraryCodeForTypes = true,autoImportCompletions = true},venvPath = "~/.venvs"}}
+
+[[language]]
+name = "html"
+language-servers = ["angular"]
+
+[[language]]
+name = "typescript"
+language-servers = ["angular", "typescript-language-server"]
+
+[language-server.angular]
+command = "angular-language-server"
+args = ["--stdio"]
