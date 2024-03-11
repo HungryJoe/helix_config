@@ -20,3 +20,6 @@ right = ["diagnostics", "selections", "position", "position-percentage", "file-e
 [editor.soft-wrap]
 enable = true
 wrap-at-text-width = true
+
+[editor.smart-tab]
+enable = false
