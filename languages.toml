@@ -9,11 +9,12 @@ config = {python = {analysis = {autoSearchPaths = true,diagnosticMode = "workspa
 
 [[language]]
 name = "html"
-language-servers = ["angular"]
+# language-servers = ["angular"]
+comment-token = "<!--"
 
 [[language]]
 name = "typescript"
-language-servers = ["angular", "typescript-language-server"]
+language-servers = ["typescript-language-server"]
 
 [language-server.angular]
 command = "angular-language-server"
