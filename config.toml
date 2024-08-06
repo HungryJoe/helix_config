@@ -23,3 +23,9 @@ wrap-at-text-width = true
 
 [editor.smart-tab]
 enable = false
+
+[keys.normal."]"]
+g = ["save_selection", "goto_next_change"]
+
+[keys.normal."["]
+g = ["save_selection", "goto_prev_change"]
