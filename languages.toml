@@ -5,7 +5,12 @@ language-servers = ["pyright"]
 [language-server.pyright]
 command = "pyright-langserver"
 args = ["--stdio"] 
-config = {python = {analysis = {autoSearchPaths = true,diagnosticMode = "workspace",useLibraryCodeForTypes = true,autoImportCompletions = true},venvPath = "~/.venvs"}}
+
+[language-server.pyright.config.python.analysis]
+autoSearchPaths = true
+diagnosticMode = "workspace"
+useLibraryCodeForTypes = true
+autoImportCompletions = true
 
 [[language]]
 name = "html"
