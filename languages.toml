@@ -25,3 +25,12 @@ language-servers = ["typescript-language-server"]
 [language-server.angular]
 command = "angular-language-server"
 args = ["--stdio"]
+
+[[language]]
+name = "java"
+language-servers = ["jdtls"]
+roots = ["pom.xml", "build.gradle", ]
+
+[language-server.jdtls]
+command = "jdtls"
+args = ["--java-executable", "/Users/skagan/.nix-profile/zulu-21.jdk/Contents/Home/bin/java"]
