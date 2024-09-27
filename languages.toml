@@ -38,17 +38,15 @@ reportMissingTypeArgument = "information"
 
 [[language]]
 name = "html"
-# language-servers = ["angular"]
+language-servers = ["angular"]
 comment-token = "<!--"
+roots = ["angular.json"]
 
 [[language]]
 name = "typescript"
 file-types = ["ts"]
-language-servers = ["typescript-language-server"]
-
-[language-server.angular]
-command = "angular-language-server"
-args = ["--stdio"]
+language-servers = [{name="angular"}, "typescript-language-server"]
+roots = ["tsconfig.json"]
 
 [[language]]
 name = "java"
@@ -58,3 +56,8 @@ roots = ["pom.xml", "build.gradle", ]
 [language-server.jdtls]
 command = "jdtls"
 args = ["--java-executable", "/Users/skagan/.nix-profile/zulu-21.jdk/Contents/Home/bin/java"]
+
+[language-server.angular]
+# --viewEngine required for Angular 12 language server
+args = ["--stdio", "--tsProbeLocations", ".", "--ngProbeLocations", ".", "--viewEngine"]
+required-root-patterns = ["angular.json"]
