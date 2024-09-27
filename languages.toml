@@ -1,10 +1,28 @@
 [[language]]
 name = "python"
-language-servers = ["basedpyright"]
+language-servers = ["pylsp", "basedpyright"]
+
+[language-server.pylsp]
+command = "pylsp"
+# args = ["-vvv", "--log-file", "/tmp/lsp.log"]
+timeout = 5
+
+[language-server.pylsp.config.pylsp.plugins]
+autopep8 = {enabled = false}
+pycodestyle = {enabled = false}
+pydocstyle = {enabled = false}
+# pylint = {enabled = true, executable="pylint"}
+yapf = {enabled = false}
+# rope_autoimport = {enabled = true}
+# rope_completion = {enabled = true}
+ruff = {enabled = true, select = ["F"], format = ["I"], lineLength = 120, targetVersion = "py310"}
 
 [language-server.basedpyright]
 command = "basedpyright-langserver"
 args = ["--stdio"] 
+
+[language-server.basedpyright.config.basedpyright]
+disableLanguageServices = true
 
 [language-server.basedpyright.config.basedpyright.analysis]
 autoSearchPaths = true
