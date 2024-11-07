@@ -1,6 +1,6 @@
 [[language]]
 name = "python"
-language-servers = ["basedpyright"]
+language-servers = ["basedpyright", "pylsp"]
 
 [language-server.basedpyright]
 command = "basedpyright-langserver"
@@ -15,8 +15,26 @@ typeCheckingMode = "basic"
 
 [language-server.basedpyright.config.basedpyright.analysis.diagnosticSeverityOverrides]
 reportUnknownParameterType = "information"
-reportUnusedImport = "warning"
+reportUnusedImport = "none"
 reportMissingTypeArgument = "information"
+
+[language-server.pylsp]
+command = "pylsp"
+
+[language-server.pylsp.config.pylsp.plugins]
+pycodestyle = {enabled = false}
+pydocstyle = {enabled = false}
+# pylint = {enabled = true, executable="pylint"}
+yapf = {enabled = false}
+# rope_autoimport = {enabled = true}
+# rope_completion = {enabled = true}
+ruff = {enabled = true, select = ["F"], format = ["I"], lineLength = 120, targetVersion = "py310"}
+jedi_completion = {enabled = false}
+jedi_definition = {enabled = false}
+jedi_hover = {enabled = false}
+jedi_references = {enabled = false}
+jedi_signature_help = {enabled = false}
+jedi_symbols = {enabled = false}
 
 [[language]]
 name = "html"
