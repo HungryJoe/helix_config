@@ -38,7 +38,7 @@ jedi_symbols = {enabled = false}
 
 [[language]]
 name = "html"
-language-servers = ["angular"]
+language-servers = ["vscode-html-language-server", "angular"]
 comment-token = "<!--"
 roots = ["angular.json"]
 
