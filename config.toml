@@ -6,6 +6,7 @@ text-width = 120
 idle-timeout = 200
 completion-trigger-len = 1
 color-modes = true
+auto-format = false
 
 [editor.cursor-shape]
 normal = "block"
