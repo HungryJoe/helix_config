@@ -1,3 +1,25 @@
+[language-server.lsp-ai]
+command = "lsp-ai"
+
+[language-server.lsp-ai.config.memory]
+file_store = { }
+
+[language-server.lsp-ai.config.models."opencoder:latest"]
+type = "ollama"
+model =  "opencoder:latest"
+
+[language-server.lsp-ai.config.completion]
+model = "opencoder:latest"
+
+[language-server.lsp-ai.config.completion.parameters]
+max-context = 2000
+options = {num_predict = 32}
+
+[language-server.lsp-ai.config.completion.parameters.fim]
+start="<|fim_begin|>"
+middle="<|fim_hole|>"
+end="<|fim_end|>"
+
 [[language]]
 name = "python"
 language-servers = ["basedpyright", "pylsp"]
@@ -39,14 +61,14 @@ pylsp_rope = {enabled = true}
 
 [[language]]
 name = "html"
-language-servers = ["vscode-html-language-server", "angular"]
+language-servers = ["vscode-html-language-server"]
 comment-token = "<!--"
 roots = ["angular.json"]
 
 [[language]]
 name = "typescript"
 file-types = ["ts"]
-language-servers = [{name="angular"}, "typescript-language-server"]
+language-servers = ["typescript-language-server", "lsp-ai"]
 roots = ["tsconfig.json"]
 
 [[language]]
