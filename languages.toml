@@ -61,14 +61,19 @@ pylsp_rope = {enabled = true}
 
 [[language]]
 name = "html"
-language-servers = ["vscode-html-language-server"]
+language-servers = ["vscode-html-language-server", "angular"]
 comment-token = "<!--"
 roots = ["angular.json"]
 
 [[language]]
+name = "scss"
+file-types = ["scss"]
+language-servers = ["vscode-css-language-server"]
+
+[[language]]
 name = "typescript"
 file-types = ["ts"]
-language-servers = ["typescript-language-server", "lsp-ai"]
+language-servers = ["typescript-language-server", "angular", "lsp-ai"]
 roots = ["tsconfig.json"]
 
 [[language]]
