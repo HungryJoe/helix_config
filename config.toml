@@ -13,6 +13,10 @@ normal = "block"
 insert = "bar"
 select = "block"
 
+[editor.lsp]
+display-inlay-hints = true
+auto-signature-help = false
+
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "file-modification-indicator"]
 center = []
