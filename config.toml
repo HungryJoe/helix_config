@@ -29,6 +29,10 @@ wrap-at-text-width = true
 [editor.smart-tab]
 enable = false
 
+[keys.normal]
+C-i = [":toggle-option lsp.display-inlay-hints"]
+C-s = [":toggle-option lsp.auto-signature-help"]
+
 [keys.normal."]"]
 g = ["save_selection", "goto_next_change"]
 
