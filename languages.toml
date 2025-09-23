@@ -22,7 +22,15 @@ end="<|fim_end|>"
 
 [[language]]
 name = "python"
-language-servers = ["basedpyright", "pylsp"]
+language-servers = ["basedpyright", "ruff", "pylsp"]
+
+[language-server.ruff.config]
+select = ["F"]
+ignore = ["F403", "F405", "F821"]
+format = ["I"]
+lineLength = 120
+targetVersion = "py310"
+
 
 [language-server.basedpyright]
 command = "basedpyright-langserver"
@@ -50,7 +58,7 @@ pydocstyle = {enabled = false}
 yapf = {enabled = false}
 # rope_autoimport = {enabled = true}
 # rope_completion = {enabled = true}
-ruff = {enabled = true, select = ["F"], ignore = ["F403", "F405", "F821"], format = ["I"], lineLength = 120, targetVersion = "py310"}
+ruff = {enabled = false}
 jedi_completion = {enabled = false}
 jedi_definition = {enabled = false}
 jedi_hover = {enabled = false}
