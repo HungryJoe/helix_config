@@ -73,5 +73,5 @@ args = ["--java-executable", "/Users/skagan/.nix-profile/zulu-21.jdk/Contents/Ho
 
 [language-server.angular]
 # --viewEngine required for Angular 12 language server
-args = ["--stdio", "--tsProbeLocations", ".", "--ngProbeLocations", ".", "--viewEngine"]
+args = ["--stdio", "--tsProbeLocations", "./node_modules", "--ngProbeLocations", "./node_modules"]
 required-root-patterns = ["angular.json"]
