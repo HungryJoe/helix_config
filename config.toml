@@ -30,7 +30,7 @@ wrap-at-text-width = true
 enable = false
 
 [keys.normal]
-C-i = [":toggle-option lsp.display-inlay-hints"]
+C-h = [":toggle-option lsp.display-inlay-hints"]
 C-s = [":toggle-option lsp.auto-signature-help"]
 
 [keys.normal."]"]
