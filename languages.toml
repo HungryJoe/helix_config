@@ -1,6 +1,6 @@
 [[language]]
 name = "python"
-language-servers = ["basedpyright", "ruff", "pylsp"]
+language-servers = ["ty", "ruff", "pylsp"]
 
 [language-server.ruff.config]
 select = ["F"]
@@ -8,7 +8,6 @@ ignore = ["F403", "F405", "F821"]
 format = ["I"]
 lineLength = 120
 targetVersion = "py310"
-
 
 [language-server.basedpyright]
 command = "basedpyright-langserver"
@@ -39,9 +38,9 @@ yapf = {enabled = false}
 ruff = {enabled = false}
 jedi_completion = {enabled = false}
 jedi_definition = {enabled = false}
-jedi_hover = {enabled = false}
+# jedi_hover = {enabled = false}
 jedi_references = {enabled = false}
-jedi_signature_help = {enabled = false}
+# jedi_signature_help = {enabled = false}
 jedi_symbols = {enabled = false}
 pylsp_rope = {enabled = true}
 
