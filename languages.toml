@@ -61,6 +61,11 @@ file-types = ["ts"]
 language-servers = ["typescript-language-server", "angular"]
 roots = ["tsconfig.json"]
 
+[language-server.angular]
+# --viewEngine required for Angular 12 language server
+args = ["--stdio", "--tsProbeLocations", "./node_modules", "--ngProbeLocations", "./node_modules"]
+required-root-patterns = ["angular.json"]
+
 [[language]]
 name = "java"
 language-servers = ["jdtls"]
@@ -69,8 +74,3 @@ roots = ["pom.xml", "build.gradle", ]
 [language-server.jdtls]
 command = "jdtls"
 args = ["--java-executable", "/Users/skagan/.nix-profile/zulu-21.jdk/Contents/Home/bin/java"]
-
-[language-server.angular]
-# --viewEngine required for Angular 12 language server
-args = ["--stdio", "--tsProbeLocations", "./node_modules", "--ngProbeLocations", "./node_modules"]
-required-root-patterns = ["angular.json"]
