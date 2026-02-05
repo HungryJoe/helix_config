@@ -74,3 +74,11 @@ roots = ["pom.xml", "build.gradle", ]
 [language-server.jdtls]
 command = "jdtls"
 args = ["--java-executable", "/Users/skagan/.nix-profile/zulu-21.jdk/Contents/Home/bin/java"]
+
+[[language]]
+name = "sql"
+language-servers = ["postgres-language-server"]
+
+[language-server.postgres-language-server]
+command = "postgres-language-server"
+args = ["lsp-proxy", "--config-path", "/Users/skagan/postgres-language-server.jsonc"]
