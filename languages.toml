@@ -1,6 +1,6 @@
 [[language]]
 name = "python"
-language-servers = ["ty", "ruff", "pylsp"]
+language-servers = ["ty", "ruff"]
 
 [language-server.ruff.config]
 select = ["F"]
